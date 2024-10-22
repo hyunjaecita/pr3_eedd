@@ -184,8 +184,8 @@ void AVL<T>::RecorreInorden(NodoA<T>* &p, VDinamico<T*> &vector){
 template <class T>
 void AVL<T>::BorrarPostorden (NodoA<T> *p){
     if (p) {
-        postOrden(p->izq);
-        postOrden(p->der);
+        BorrarPostorden(p->izq);
+        BorrarPostorden(p->der);
         delete p;
         p = nullptr;
     }
