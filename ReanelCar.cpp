@@ -44,16 +44,15 @@ ReanelCar::ReanelCar() {
                 getline(columnas, modelo,' ');
 
                 Coche coche(id_matricula, marca, modelo);
-                //Coche coche;
-                cars.insertar(coche);
+                cars.inserta(coche);
 
                 fila="";
                 columnas.clear();
 /*
-                                std::cout << " Coche: ( Matricula=" << v[contador].getId_matricula()
+                                std::cout << " Coche: ( Matricula=" << cars[contador].getId_matricula()
                                           << " Marca=" << v[contador].getMarca() << " Modelo=" << v[contador].getModelo()
-                                          << ")" << std::endl;
-*/
+                                          << ")" << std::endl;*/
+
                 contador++;
             }
         }
@@ -104,10 +103,10 @@ ReanelCar::ReanelCar() {
                 fila1="";
                 columnas1.clear();
 /*
-                                std::cout << " Usuario: ( Nif=" <<u.leer(contador1).getNif()
-                                          << " Clave=" << u.leer(contador1).getClave() << " Nombre=" << u.leer(contador1).getNombre()
-                                          << " Direccion=" << u.leer(contador1).getDireccion() <<")" << std::endl;
- */           }
+                                std::cout << " Usuario: ( Nif=" <<users.leer(contador1).getNif()
+                                          << " Clave=" << users.leer(contador1).getClave() << " Nombre=" << users.leer(contador1).getNombre()
+                                          << " Direccion=" << users.leer(contador1).getDireccion() <<")" << std::endl;*/
+           }
 
        contador1++;
     }
@@ -164,7 +163,7 @@ ListaDEnlazada<Usuario*> ReanelCar::buscarUsrNomb(std::string nom) {
  * @param mat matricula
  * @return el coche de la lista que coincida
  */
-Coche * ReanelCar::buscarCochMat(std::string mat) {
+/*Coche * ReanelCar::buscarCochMat(std::string mat) {
     for (int i = 0; i < cars.getTamLogico(); ++i) {
 		if (mat == cars[i].getId_matricula()) {
 			return &cars[i];
@@ -172,6 +171,7 @@ Coche * ReanelCar::buscarCochMat(std::string mat) {
 	}
 
 }
+*/
 
 
 /**
@@ -179,7 +179,7 @@ Coche * ReanelCar::buscarCochMat(std::string mat) {
  * @param mod modelo
  * @return una lista con los coches de la lista que coincidan
  */
-VDinamico<Coche *> ReanelCar::buscarCochModelo(std::string mod) {
+/*VDinamico<Coche *> ReanelCar::buscarCochModelo(std::string mod) {
     VDinamico<Coche *> nuevo;
     int cont=0;
     for (int i = 0; i < cars.getTamLogico(); ++i) {
@@ -189,14 +189,14 @@ VDinamico<Coche *> ReanelCar::buscarCochModelo(std::string mod) {
         }
     }
     return nuevo;
-}
+}*/
 
 /**
  * @brief Buscamos varrios coches que coincidan con el modelo dado mediante una busqueda binaria
  * @param mod modelo
  * @return una lista con los coches de la lista que coincidan
  */
-VDinamico<Coche *> ReanelCar::buscarCochModeloBinaria(std::string mod) {
+/*VDinamico<Coche *> ReanelCar::buscarCochModeloBinaria(std::string mod) {
     cars.ordenar();
     VDinamico<Coche *> nuevo;
     int cont = 0;
@@ -226,7 +226,7 @@ VDinamico<Coche *> ReanelCar::buscarCochModeloBinaria(std::string mod) {
             sup = curIn - 1;
         }
     }
-}
+}*/
 
 
 /**
